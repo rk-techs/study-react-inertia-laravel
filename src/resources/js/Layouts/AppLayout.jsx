@@ -1,10 +1,11 @@
+import { Link } from '@inertiajs/react'
 
 export default function App({ children }) {
     return (
         <>
         <header className="layout-header">
             <div className="header-container">
-                ヘッダー
+                <Link href="/">ヘッダー</Link>
             </div>
         </header>
         <main className="layout-main">

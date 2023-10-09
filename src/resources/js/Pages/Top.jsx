@@ -9,21 +9,23 @@ function MenuLink({ href, children }) {
     );
 }
 
-export default function Top() {
+const Top = () => {
     const links = [
         { href: "/", label: "Home" },
         { href: "/users", label: "User" }
     ];
 
     return (
-        <AppLayout>
-            <div className="menu-list">
-                {links.map(link => (
-                    <MenuLink key={link.href} href={link.href}>
-                        {link.label}
-                    </MenuLink>
-                ))}
-            </div>
-        </AppLayout>
+        <div className="menu-list">
+            {links.map(link => (
+                <MenuLink key={link.href} href={link.href}>
+                    {link.label}
+                </MenuLink>
+            ))}
+        </div>
     );
 }
+
+Top.layout = page => <AppLayout children={page} title="TOP" />
+
+export default Top
