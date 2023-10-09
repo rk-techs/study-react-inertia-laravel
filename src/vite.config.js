@@ -7,4 +7,10 @@ export default defineConfig({
         laravel(['resources/js/app.jsx']),
         react(),
     ],
+    server: {
+        host: true,
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });
