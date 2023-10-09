@@ -1,13 +1,10 @@
+import UserTable from "./UserTable";
 
 export default function Index({ users }) {
-    const userList = users.map(user =>
-        <li key={user.id}>
-            {user.id} : {user.name}
-        </li>
-    );
     return (
-        <ul>
-            {userList}
-        </ul>
+        <div>
+            <h1>User List</h1>
+            <UserTable users={users} />
+        </div>
     );
 }
