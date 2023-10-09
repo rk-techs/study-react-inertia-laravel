@@ -1,0 +1,19 @@
+@use '../global' as *;
+
+.layout-home {
+  background-color: var(--main-color);
+  color: var(--black);
+  min-height: calc(100vh - var(--footer-height));
+}
+
+.home-container {
+  margin: 0 auto;
+  padding-top: calc(var(--page-padding-y) + var(--header-height));
+  padding-bottom: var(--page-padding-y);
+  padding-left: var(--page-padding-x);
+  padding-right: var(--page-padding-x);
+
+  @include pc-screen() {
+    max-width: 960px;
+  }
+}

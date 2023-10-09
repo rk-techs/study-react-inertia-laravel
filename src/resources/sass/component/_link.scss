@@ -1,0 +1,20 @@
+@use '../global' as *;
+
+.link {
+  color: var(--link);
+  display: inline-block;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--link-hover-color);
+    cursor: pointer;
+  }
+
+  &.is-not-underlined {
+    text-decoration: none;
+  }
+
+  &.is-block {
+    display: block;
+  }
+}

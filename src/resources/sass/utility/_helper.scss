@@ -1,0 +1,15 @@
+@use '../global' as *;
+
+/* Helper
+-------------------------*/
+
+.u-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-disabled,
+.u-collapse {
+  display: none;
+}
