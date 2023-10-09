@@ -16,7 +16,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Test');
+    return Inertia::render('Top');
 });
 
 Route::get('users', [UserController::class, 'index'])->name('users.index');
