@@ -1,19 +1,19 @@
 export default function UserTable({ users }) {
     return (
-        <table>
-            <thead>
+        <table className="table">
+            <thead className="table-header">
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>E-mail</th>
+                    <th className="th-cell">ID</th>
+                    <th className="th-cell">Name</th>
+                    <th className="th-cell">E-mail</th>
                 </tr>
             </thead>
             <tbody>
                 {users.map(user => (
                     <tr key={user.id}>
-                        <td>{user.id}</td>
-                        <td>{user.name}</td>
-                        <td>{user.email}</td>
+                        <td className="td-cell">{user.id}</td>
+                        <td className="td-cell">{user.name}</td>
+                        <td className="td-cell">{user.email}</td>
                     </tr>
                 ))}
             </tbody>
