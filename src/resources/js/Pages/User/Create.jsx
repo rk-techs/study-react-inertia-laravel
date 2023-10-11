@@ -18,7 +18,7 @@ const Create = () => {
 
     const submit = (e) => {
         e.preventDefault();
-        post('/users/store')
+        post(route('users.store'))
     };
 
     return (
