@@ -73,4 +73,8 @@
     background-color: var(--delete-color);
     color: var(--white);
   }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
 }

@@ -3,7 +3,7 @@ import AppLayout from '@/Layouts/AppLayout';
 import { useForm } from '@inertiajs/react';
 
 const Create = () => {
-    const { data, setData, post, processing, errors, reset } = useForm({
+    const { data, setData, post, processing, errors, reset, isDirty } = useForm({
         name: '',
         email: '',
         password: '',
@@ -74,7 +74,7 @@ const Create = () => {
                     <div className='invalid-feedback'>{errors.password_confirmation}</div>
                 </div>
 
-                <button className='btn btn-store' disabled={processing}>
+                <button className='btn btn-store' disabled={!isDirty}>
                     登録
                 </button>
             </form>
