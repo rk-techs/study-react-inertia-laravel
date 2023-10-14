@@ -11,7 +11,11 @@ export default function UserTable({ users }) {
             <tbody>
                 {users.map(user => (
                     <tr key={user.id}>
-                        <td className="td-cell">{user.id}</td>
+                        <td className="td-cell">
+                            <a href={route('users.edit', user.id)}>
+                            {user.id}
+                            </a>
+                            </td>
                         <td className="td-cell">{user.name}</td>
                         <td className="td-cell">{user.email}</td>
                     </tr>

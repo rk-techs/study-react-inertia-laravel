@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UserUpdateRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -31,6 +32,20 @@ class UserController extends Controller
             'password'  => Hash::make($request->input('password')),
         ]);
 
+        return to_route('users.index');
+    }
+
+    public function edit(string $id)
+    {
+        $user = User::FindOrFail($id);
+        return Inertia::render('User/Edit', compact('user'));
+    }
+
+    public function update(UserUpdateRequest $request, string $id)
+    {
+        $user = User::FindOrFail($id);
+        $inputs = $request->only(['name', 'email']);
+        $user->update($inputs);
         return to_route('users.index');
     }
 }
