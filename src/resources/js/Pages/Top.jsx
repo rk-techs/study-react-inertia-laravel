@@ -12,7 +12,8 @@ function MenuLink({ href, children }) {
 const Top = () => {
     const links = [
         { href: "/", label: "Home" },
-        { href: "/users", label: "User" }
+        { href: "/users", label: "User" },
+        { href: "/customers", label: "Customer" }
     ];
 
     return (
